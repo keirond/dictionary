@@ -1,21 +1,14 @@
-# Ignore node_modules and build directories
 node_modules/
 .next/
-dist/
 public/
 
-# Ignore temporary or system files
-*.min.js
 *.log
-*.cache
 .DS_Store
 .env
 .env.local
 .env.production
 .env.test
 
-# Ignore Hugo output directory
 hugo_output/
 
-# Ignore specific files or folders
 coverage/

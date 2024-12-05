@@ -8,7 +8,11 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "import", "prettier"],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "prettier"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -30,9 +34,16 @@
       "warn",
       {
         "groups": [
-          ["builtin", "external"],
+          [
+            "builtin",
+            "external"
+          ],
           "internal",
-          ["parent", "sibling", "index"]
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
         ],
         "newlines-between": "always",
         "alphabetize": {
@@ -47,10 +58,15 @@
       "error",
       "always",
       {
-        "markers": ["/"]
+        "markers": [
+          "/"
+        ]
       }
     ],
-    "multiline-comment-style": ["error", "starred-block"],
+    "multiline-comment-style": [
+      "error",
+      "starred-block"
+    ],
     "no-inline-comments": "error",
     "capitalized-comments": [
       "error",
@@ -62,7 +78,10 @@
   },
   "overrides": [
     {
-      "files": ["**/*.ts", "**/*.tsx"],
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
       "rules": {
         "@typescript-eslint/no-var-requires": "off"
       }
@@ -71,6 +90,11 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
     }
   }
 }

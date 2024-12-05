@@ -1,39 +1,44 @@
 {
-    "name": "dictionary",
-    "version": "1.0.0",
-    "description": "A custom dictionary app with dynamic word management and retention tracking.",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-        "format": "prettier --write ."
-    },
-    "keywords": [
-        "dictionary",
-        "nextjs",
-        "hugo",
-        "custom-words"
-    ],
-    "author": "Bao Dang",
-    "license": "MIT",
-    "dependencies": {
-        "next": "^13.0.0",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "lowdb": "^5.0.0",
-        "front-matter": "^4.0.2"
-    },
-    "devDependencies": {
-        "@types/lowdb": "latest",
-
-        "eslint": "latest",
-        "@eslint/eslintrc": "latest",
-        "eslint-config-next": "latest",
-        "@typescript-eslint/eslint-plugin": "latest",
-        "@typescript-eslint/parser": "latest",
-        "eslint-plugin-import": "latest",
-        "eslint-plugin-prettier": "latest",
-        "eslint-config-prettier": "latest",
-        "prettier": "latest"
-    }
+  "name": "dictionary",
+  "version": "1.0.0",
+  "description": "A custom dictionary app with dynamic word management and retention tracking.",
+  "main": "src/pages/index.ts",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "dictionary",
+    "nextjs",
+    "hugo",
+    "custom-words"
+  ],
+  "author": "Bao Dang",
+  "license": "MIT",
+  "dependencies": {
+    "lowdb": "^5.0.0",
+    "next": "^14.2.10",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "antd": "^5.0.0",
+    "front-matter": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/lowdb": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-import-resolver-typescript": "latest",
+    "prettier": "latest"
+  }
 }

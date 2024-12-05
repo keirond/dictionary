@@ -4,6 +4,7 @@
 - ESLint & Next.js Config
 
 ### Scripts
+
 - dev: Starts the Next.js development server.
 - build: Builds the Next.js app for production.
 - start: Starts the production server for Next.js.
