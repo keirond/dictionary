@@ -1,14 +1,3 @@
-node_modules/
 .next/
+out/
 public/
-
-*.log
-.DS_Store
-.env
-.env.local
-.env.production
-.env.test
-
-hugo_output/
-
-coverage/
