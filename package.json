@@ -1,6 +1,7 @@
 {
   "name": "dictionary",
-  "version": "0.1.0",
+  "private": true,
+  "workspaces": [],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,14 +14,6 @@
     "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
     "clean": "rm -rf node_modules"
   },
-  "keywords": [
-    "dictionary",
-    "nextjs",
-    "hugo",
-    "custom-words"
-  ],
-  "author": "Bao Dang",
-  "license": "MIT",
   "dependencies": {
     "next": "^15.0.4",
     "react": "^19.0.0",
@@ -33,5 +26,6 @@
     "typescript": "^5.7.2",
     "prettier": "^3.4.2"
   },
-  "packageManager": "pnpm@9.14.4"
+  "packageManager": "bun@1.1.38",
+  "resolutions": {}
 }
