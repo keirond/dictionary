@@ -1,13 +1,16 @@
 module.exports = {
-    printWidth: 120,
-    useTabs: false,
-    tabWidth: 4,
-    overrides: [
-        {
-            files: ["*.json", "*.yml", "*.yaml", "*.js"],
-            options: {
-                tabWidth: 2,
-            },
-        },
-    ],
+  trailingComma: "es5",
+  useTabs: false,
+  tabWidth: 4,
+  endOfLine: "lf",
+  printWidth: 100,
+  overrides: [
+    {
+      files: ["*.json", "*.yml", "*.yaml", "*rc.js"],
+      options: {
+        tabWidth: 2,
+      },
+    },
+  ],
+  singleQuote: true,
 };

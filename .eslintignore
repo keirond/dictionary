@@ -1,3 +1,5 @@
-.next/
-out/
-public/
+*.js
+*.mjs
+
+dist/
+node_modules/

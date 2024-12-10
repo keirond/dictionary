@@ -1,4 +1,6 @@
-module.exports = {};
+module.exports = {
+    "root": true,
+};
 //
 // {
 //   "root": true,
