@@ -1,4 +1,4 @@
-<!-- specify files and directories that should be excluded from the Docker build context when creating Docker images -->
+# Specify files and directories that should be excluded from the Docker build context when creating Docker images
 Dockerfile
 docker-compose.yml
 .dockerignore

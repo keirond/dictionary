@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   trailingComma: "es5",
   useTabs: false,
   tabWidth: 4,
@@ -6,7 +6,7 @@ module.exports = {
   printWidth: 100,
   overrides: [
     {
-      files: ["*.json", "*.yml", "*.yaml", "*rc.js"],
+      files: ["*.json", "*.yml", "*.yaml", "*rc.js", "*.config.js"],
       options: {
         tabWidth: 2,
       },
