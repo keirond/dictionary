@@ -1,4 +1,5 @@
 export default {
+  semi: true,
   trailingComma: "es5",
   useTabs: false,
   tabWidth: 4,
