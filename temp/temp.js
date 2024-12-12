@@ -9,7 +9,6 @@ const ignores = ['*.js', '*.mjs', 'dist/', 'node_modules/'];
 const jsRules = {};
 
 export default tseslint.configs({
-  eslint.config
 });
 
 // export const c = [

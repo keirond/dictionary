@@ -1,13 +1,13 @@
 export default {
   semi: true,
-  trailingComma: "es5",
+  trailingComma: 'es5',
   useTabs: false,
   tabWidth: 4,
-  endOfLine: "lf",
+  endOfLine: 'lf',
   printWidth: 100,
   overrides: [
     {
-      files: ["*.json", "*.yml", "*.yaml", "*rc.js", "*.config.js"],
+      files: ['*.json', '*.yml', '*.yaml', '*rc.js', '*.config.js'],
       options: {
         tabWidth: 2,
       },
