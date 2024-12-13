@@ -8,7 +8,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended';
 import prettierConfig from './prettier.config.js';
 
-// import eslintPluginImport from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import';
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -21,6 +21,9 @@ export default tseslint.config(
         sourceType: 'module',
         project: ['./tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
     plugins: {
