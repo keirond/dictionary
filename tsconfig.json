@@ -27,7 +27,7 @@
       "@app/*": ["app/*"],
       "@component/*": ["components/*"]
     },
-    "typeRoots": ["node_modules/@type", "types"]
+    "typeRoots": ["node_modules/@type", "@types"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

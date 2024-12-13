@@ -6,8 +6,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended';
 import prettierConfig from './prettier.config.js';
 
-import pluginNext from 'types/plugin-next.js';
-
+import pluginNext from 'eslint-plugin-next';
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -36,10 +35,11 @@ export default tseslint.config(
     }
   },
   {
-    files: ["**/*.jsx", "**/*.tsx"],
-    extends: [
-        pluginNext
-    ]
+    files: ['**/*.jsx', '**/*.tsx'],
+    plugins: {
+      '@next/next': pluginNext
+    },
+    extends: [pluginNext.configs.recommended, pluginNext.configs['core-web-vitals']]
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -52,6 +52,6 @@ export default tseslint.config(
     }
   },
   {
-    ignores: ['dist/', 'node_modules/']
+    ignores: ['.next/', 'node_modules/']
   }
 );
