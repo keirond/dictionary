@@ -2,11 +2,12 @@ import tseslint from 'typescript-eslint';
 
 import eslint from '@eslint/js';
 
-import reactPlugin from 'eslint-plugin-react';
-
 import prettierPlugin from 'eslint-plugin-prettier';
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended';
 import prettierConfig from './prettier.config.js';
+
+import pluginNext from 'types/plugin-next.js';
+
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -35,26 +36,10 @@ export default tseslint.config(
     }
   },
   {
-    files: ['**/*.jsx', '**/*.tsx'],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react: reactPlugin
-    },
-    rules: {
-      'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }]
-    },
-
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    }
+    files: ["**/*.jsx", "**/*.tsx"],
+    extends: [
+        pluginNext
+    ]
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -67,6 +52,6 @@ export default tseslint.config(
     }
   },
   {
-    ignores: ['**/*.js', '**/*.mjs', 'dist/', 'node_modules/']
+    ignores: ['dist/', 'node_modules/']
   }
 );

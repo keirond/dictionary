@@ -5,7 +5,7 @@ export default {
   printWidth: 100,
   overrides: [
     {
-      files: ['**/*.json', '**/*.yml', '**/*.config.js'],
+      files: ['**/*.json', '**/*.config.ts', '**/*.config.js'],
       options: {
         tabWidth: 2
       }
