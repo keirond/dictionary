@@ -8,8 +8,6 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended';
 import prettierConfig from './prettier.config.js';
 
-import importPlugin from 'eslint-plugin-import';
-
 export default tseslint.config(
   eslint.configs.recommended,
   {
@@ -20,58 +18,55 @@ export default tseslint.config(
         ecmaVersion: 2022,
         sourceType: 'module',
         project: ['./tsconfig.json'],
-        tsconfigRootDir: import.meta.dirname,
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+        tsconfigRootDir: import.meta.dirname
+      }
     },
     plugins: {
-      '@typescript-eslint': tseslint.plugin,
+      '@typescript-eslint': tseslint.plugin
     },
     extends: [...tseslint.configs.strictTypeChecked, ...tseslint.configs.stylisticTypeChecked],
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
-          argsIgnorePattern: '^_',
-        },
-      ],
-    },
+          argsIgnorePattern: '^_'
+        }
+      ]
+    }
   },
   {
     files: ['**/*.jsx', '**/*.tsx'],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
-      react: reactPlugin,
+      react: reactPlugin
     },
     rules: {
-      'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+      'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }]
     },
 
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
+        version: 'detect'
+      }
+    }
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
-      prettier: prettierPlugin,
+      prettier: prettierPlugin
     },
     extends: [prettierPluginRecommended],
     rules: {
-      'prettier/prettier': ['warn', prettierConfig],
-    },
+      'prettier/prettier': ['warn', prettierConfig]
+    }
   },
   {
-    ignores: ['**/*.js', '**/*.mjs', 'dist/', 'node_modules/'],
+    ignores: ['**/*.js', '**/*.mjs', 'dist/', 'node_modules/']
   }
 );

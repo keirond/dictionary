@@ -17,13 +17,11 @@
     "jsx": "preserve",
     "incremental": true,
     // "noUncheckedIndexedAccess": false,
-    // "baseUrl": "src",
-    // "paths": {
-    //   "@component/*": ["components/*"],
-    //   "@page/*": ["pages/*"],
-    //   "@lib/*": ["lib/*"]
-    // },
-
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@component/*": ["components/*"],
+    },
     "plugins": [
       {
         "name": "next"

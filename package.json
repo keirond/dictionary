@@ -7,12 +7,6 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "eslint . .ts,.tsx",
-    "lint:errors": "eslint . --ext .ts,.tsx --quiet",
-    "lint:fix": "eslint . .js,.jsx,.ts,.tsx --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prettier-check": "prettier --check \"**/*.{ts,tsx,md}\"",
-    "clean": "rm -rf node_modules"
   },
   "dependencies": {
     "next": "^15.0.4",
@@ -27,7 +21,8 @@
     "eslint-plugin-import": "^2.31.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0"
   },
   "packageManager": "bun@1.1.38",
   "resolutions": {},
