@@ -4,7 +4,7 @@ import eslint from '@eslint/js';
 
 import prettierPlugin from 'eslint-plugin-prettier';
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended';
-import prettierConfig from './prettier.config.js';
+import prettierConfig from './prettier.config.mjs';
 
 import pluginNext from 'eslint-plugin-next';
 

@@ -5,18 +5,17 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    // "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    // "allowSyntheticDefaultImports": true,
+    //// "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    // "noUncheckedIndexedAccess": false,
+    //// "noUncheckedIndexedAccess": false,
     "plugins": [
       {
         "name": "next"
@@ -29,6 +28,6 @@
     },
     "typeRoots": ["node_modules/@type", "@types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "eslint.config.mjs"],
   "exclude": ["node_modules"]
 }
