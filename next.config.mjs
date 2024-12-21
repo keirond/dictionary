@@ -1,5 +1,3 @@
-//@ts-check
-
 import bundlAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = bundlAnalyzer({
