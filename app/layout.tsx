@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 export default function RootLayout({
@@ -7,8 +8,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <link rel="icon" href="public/favicon.con" />
             <body>{children}</body>
         </html>
     );
 }
+
+export const metadata: Metadata = {
+    icons: {
+        icon: ['icons/favicon.ico?v=4'],
+        apple: ['icons/apple-touch-icon.png?v=4'],
+        shortcut: ['icons/apple-touch-icon.png']
+    },
+    manifest: 'icons/site.webmanifest'
+};
