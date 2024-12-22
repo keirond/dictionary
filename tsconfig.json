@@ -24,7 +24,12 @@
     "baseUrl": "./src",
     "paths": {
       "@app/*": ["app/*"],
-      "@component/*": ["components/*"]
+      "@common/*": ["common/*"],
+      "@component/*": ["components/*"],
+      "@middleware/*": ["middlewares/*"],
+      "@model/*": ["models/*"],
+      "@styles/*": ["styles/*"],
+      "@util/*": ["utils/*"]
     },
     "typeRoots": ["node_modules/@type", "@types"]
   },
