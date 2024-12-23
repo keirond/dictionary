@@ -1,4 +1,4 @@
-import '@styles/global.css';
+import '@styles/globals.css';
 import { Metadata } from 'next';
 import React, { Suspense } from 'react';
 import Loading from './loading';

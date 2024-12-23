@@ -5,7 +5,7 @@ import React from 'react';
 
 export function BoardHeader(): React.ReactElement {
     return (
-        <Header className="flex">
+        <Header className="flex items-center justify-center bg-white shadow-md">
             <Badge count={1}>
                 <Avatar shape="circle" size={'large'} icon={<UserOutlined />} />
             </Badge>
