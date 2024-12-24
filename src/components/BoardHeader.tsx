@@ -1,14 +1,10 @@
-import { UserOutlined } from '@ant-design/icons';
-import { Avatar, Badge } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 import React from 'react';
 
-export function BoardHeader(): React.ReactElement {
+export default function BoardHeader({
+    children
+}: Readonly<{ children?: React.ReactNode }>): React.ReactElement {
     return (
-        <Header className="flex items-center justify-center bg-white shadow-md">
-            <Badge count={1}>
-                <Avatar shape="circle" size={'large'} icon={<UserOutlined />} />
-            </Badge>
-        </Header>
+        <Header className="flex h-16 items-center justify-center bg-gray-800">{children}</Header>
     );
 }

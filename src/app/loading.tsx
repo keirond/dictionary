@@ -1,12 +1,10 @@
-import { Col, Row, Spin } from 'antd';
+import { Spin } from 'antd';
 import React from 'react';
 
 export default function Loading(): React.ReactElement {
     return (
-        <Row justify="center" align="middle" style={{ height: '100vh' }}>
-            <Col>
-                <Spin size="large" />
-            </Col>
-        </Row>
+        <div className="flex h-screen items-center justify-center">
+            <Spin size="large" />
+        </div>
     );
 }
