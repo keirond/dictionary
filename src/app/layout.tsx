@@ -1,14 +1,20 @@
 import '@styles/globals.css';
 import { Metadata } from 'next';
+import { Patrick_Hand } from 'next/font/google';
 import React, { Suspense } from 'react';
 import Loading from './loading';
+
+const patrickHand = Patrick_Hand({
+    weight: '400',
+    variable: '--font-patrick-hand'
+});
 
 export default function AppLayout({
     children
 }: Readonly<{ children: React.ReactNode }>): React.ReactElement {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body>
+            <body className={`${patrickHand.variable} dark`}>
                 {/* Need to test loading page */}
                 <Suspense fallback={<Loading />}>{children}</Suspense>
             </body>

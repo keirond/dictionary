@@ -13,7 +13,7 @@ export default function BoardLayout({
             <BoardHeader>
                 <UserBadge displayName="keirond" />
             </BoardHeader>
-            <Content className="bg-gray-950">{children}</Content>
+            <Content className="bg-background-950">{children}</Content>
             <BoardFooter>Keiron Dang</BoardFooter>
         </Layout>
     );
