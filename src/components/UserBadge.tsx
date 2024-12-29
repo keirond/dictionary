@@ -5,7 +5,7 @@ export default function UserBadge({ displayName }: Readonly<{ displayName: strin
     return (
         <div className="flex items-center gap-4">
             <Avatar shape="circle" size={'large'} icon={<UserOutlined />} />
-            <span className="text-lg text-white">{displayName}</span>
+            <span className="text-color text-lg">{displayName}</span>
         </div>
     );
 }

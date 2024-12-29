@@ -1,30 +1,39 @@
 import React from 'react';
 
-function WordLevelNode(): React.ReactElement {
+function WordNode({ word, typeInd }: { word: string; typeInd: number }): React.ReactElement {
     return (
-        <div className="flex w-[300px] min-w-[300px] flex-col justify-center gap-7 rounded-[1rem] border border-black p-2">
+        <div className={`flex-center rounded-full px-2 py-1 bg-lvl-${typeInd.toString()}-textbox`}>
+            <div className={`font-patrick text-sm text-lvl-${typeInd.toString()}]-text`}>
+                {word}
+            </div>
+        </div>
+    );
+}
+
+function WordLevelNode({ typeInd }: { typeInd: number }): React.ReactElement {
+    return (
+        <div
+            className={`flex w-80 min-w-80 flex-col justify-center gap-4 rounded-[1rem] bg-lvl-${typeInd.toString()}-box p-2`}
+        >
             {/* Word Level Title */}
-            <div className="flex h-[40px] items-center justify-center rounded-lg border border-black">
-                <div className="font-patrick text-lg font-medium">Newly Learned</div>
+            <div
+                className={`flex h-10 items-center justify-center rounded-lg bg-lvl-${typeInd.toString()}-textbox`}
+            >
+                <div
+                    className={`font-patrick text-lg font-medium text-lvl-${typeInd.toString()}]-text`}
+                >
+                    Newly Learned
+                </div>
             </div>
             {/* Word Container */}
             <div className="flex flex-wrap items-center justify-start gap-x-1 gap-y-2">
                 {/* Words */}
-                <div className="rounded-full border border-black bg-white px-[10px] py-[4px]">
-                    <div className="font-patrick text-[12px]">common</div>
-                </div>
-                <div className="rounded-full border border-black bg-white px-[10px] py-[4px]">
-                    <div className="font-patrick text-[12px]">investigate</div>
-                </div>
-                <div className="rounded-full border border-black bg-white px-[10px] py-[4px]">
-                    <div className="font-patrick text-[12px]">testing</div>
-                </div>
-                <div className="rounded-full border border-black bg-white px-[10px] py-[4px]">
-                    <div className="font-patrick text-[12px]">common</div>
-                </div>
-                <div className="rounded-full border border-black bg-white px-[10px] py-[4px]">
-                    <div className="font-patrick text-[12px]">demonstrate</div>
-                </div>
+                <WordNode word="vast" typeInd={typeInd} />
+                <WordNode word="common" typeInd={typeInd} />
+                <WordNode word="investigate" typeInd={typeInd} />
+                <WordNode word="base" typeInd={typeInd} />
+                <WordNode word="demonstrate" typeInd={typeInd} />
+                <WordNode word="beautiful" typeInd={typeInd} />
             </div>
         </div>
     );
@@ -34,12 +43,10 @@ export default function WordRetentionPage(): React.ReactElement {
     return (
         <div className="flex items-center justify-center gap-10 p-10">
             {/* Word Level Container */}
-            <div className="custom-scrollbar flex flex-row items-center justify-center gap-4 overflow-x-auto rounded border border-gray-400 p-3">
-                <WordLevelNode />
-                <WordLevelNode />
-                <WordLevelNode />
-                <WordLevelNode />
-                <WordLevelNode />
+            <div className="scrollbar flex flex-row items-center justify-start gap-4 overflow-x-auto rounded p-3">
+                {Array.from({ length: 5 }, (_, i) => (
+                    <WordLevelNode key={i} typeInd={i + 1} />
+                ))}
             </div>
         </div>
     );

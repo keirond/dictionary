@@ -9,12 +9,14 @@ export default function BoardLayout({
     children
 }: Readonly<{ children: React.ReactNode }>): React.ReactElement {
     return (
-        <Layout className="h-screen">
+        <Layout className="bg-background h-screen">
             <BoardHeader>
                 <UserBadge displayName="keirond" />
             </BoardHeader>
-            <Content className="">{children}</Content>
-            <BoardFooter>Keiron Dang</BoardFooter>
+            <Content>{children}</Content>
+            <BoardFooter>
+                <div className='text-color'>Keiron Dang</div>
+            </BoardFooter>
         </Layout>
     );
 }

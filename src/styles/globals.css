@@ -4,12 +4,78 @@
 @tailwind variants;
 
 @layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+  }
 }
 
 @layer base {
-    body {
-        margin: 0 auto;
-    }
-    /* :root {} */
-    /* .dark {} */
+  body {
+    margin: 0 auto;
+  }
+
+  :root {
+    --background: #eeeeee;
+    --text: #000000;
+
+    --lvl-1-box: #fe9391;
+    --lvl-1-badge: #710000;
+    --lvl-1-textbox: #e0120f;
+    --lvl-1-text: #ffffff;
+
+    --lvl-2-box: #ffa68f;
+    --lvl-2-badge: #6f1600;
+    --lvl-2-textbox: #e84016;
+    --lvl-2-text: #ffffff;
+
+    --lvl-3-box: #ffba8e;
+    --lvl-3-badge: #612600;
+    --lvl-3-textbox: #db5805;
+    --lvl-3-text: #ffffff;
+
+    --lvl-4-box: #d1a185;
+    --lvl-4-badge: #492814;
+    --lvl-4-textbox: #9d623f;
+    --lvl-4-text: #ffffff;
+
+    --lvl-5-box: #c6bda8;
+    --lvl-5-badge: #332e22;
+    --lvl-5-textbox: #6b6350;
+    --lvl-5-text: #ffffff;
+  }
+
+  .dark {
+    --background: #262626;
+    --text: #ffffff;
+
+    --lvl-1-box: #710000;
+    --lvl-1-badge: #fe9391;
+    --lvl-1-textbox: #e0120f;
+    --lvl-1-text: #000000;
+
+    --lvl-2-box: #6f1600;
+    --lvl-2-badge: #ffa68f;
+    --lvl-2-textbox: #e84016;
+    --lvl-2-text: #000000;
+
+    --lvl-3-box: #612600;
+    --lvl-3-badge: #ffba8e;
+    --lvl-3-textbox: #db5805;
+    --lvl-3-text: #000000;
+
+    --lvl-4-box: #492814;
+    --lvl-4-badge: #d1a185;
+    --lvl-4-textbox: #9d623f;
+    --lvl-4-text: #000000;
+
+    --lvl-5-box: #332e22;
+    --lvl-5-badge: #c6bda8;
+    --lvl-5-textbox: #6b6350;
+    --lvl-5-text: #000000;
+  }
 }
