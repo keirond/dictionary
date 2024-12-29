@@ -14,7 +14,7 @@ export default function AppLayout({
 }: Readonly<{ children: React.ReactNode }>): React.ReactElement {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${patrickHand.variable} text-color bg-background dark`}>
+            <body className={`${patrickHand.variable} dark bg-background text-color`}>
                 {/* Need to test loading page */}
                 <Suspense fallback={<Loading />}>{children}</Suspense>
             </body>

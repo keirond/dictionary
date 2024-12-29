@@ -20,7 +20,8 @@
   }
 
   :root {
-    --background: #eeeeee;
+    --background: #c0c0c0;
+    --nav-background: #a59892;
     --text: #000000;
 
     --lvl-1-box: #fe9391;
@@ -51,6 +52,7 @@
 
   .dark {
     --background: #262626;
+    --nav-background: #3b3737;
     --text: #ffffff;
 
     --lvl-1-box: #710000;

@@ -10,6 +10,7 @@ export default {
       },
       colors: {
         background: 'var(--background)',
+        'nav-background': 'var(--nav-background)',
         color: 'var(--text)',
 
         'lvl-1': {
@@ -47,7 +48,7 @@ export default {
   },
   safelist: [
     {
-      pattern: /bg-lvl-*/
+      pattern: /(bg|text)-lvl-*/
     }
   ],
   plugins: []

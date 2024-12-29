@@ -16,7 +16,12 @@ export default function WordRetentionPage(): React.ReactElement {
             {/* Word Level Container */}
             <div className="scrollbar flex flex-row items-center justify-start gap-4 overflow-x-auto rounded p-3">
                 {titles.map((title, level) => (
-                    <WordLevelBox key={level} type={(level + 1).toString()} title={title}>
+                    <WordLevelBox
+                        key={level}
+                        type={(level + 1).toString()}
+                        title={title}
+                        wordNo={words.length}
+                    >
                         {words.map((word, index) => (
                             <WordTextBox key={index} type={(level + 1).toString()} word={word} />
                         ))}
