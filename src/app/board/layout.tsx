@@ -15,7 +15,7 @@ export default function BoardLayout({
             </BoardHeader>
             <Content>{children}</Content>
             <BoardFooter>
-                <div className='text-color'>Keiron Dang</div>
+                <div className="text-color">Keiron Dang</div>
             </BoardFooter>
         </Layout>
     );
